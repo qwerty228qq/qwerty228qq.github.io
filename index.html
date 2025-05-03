@@ -1,66 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./normalize.css" rel="stylesheet" />
-    <link href="./ios.css" rel="stylesheet" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="header">
-      <img src="./avatar.png" alt="avatar" class="header__avatar" />
-      <div class="header__textContainer">
-        <h1 class="header__title">Виктор Меркулов</h1>
-        <h3 class="header__subtitle">QA ingineer</h3>
-      </div>
-    </header>
-    <main>
-      <section class="links">
-        <h2 class="links__header">Доступен</h2>
-        <ul class="links__container">
-          <li class="links__link">
-            <p class="links__title">Телеграм</p>
-            <a class="linsk__link" href="@@w_chada">@@w_chada</a>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Эл. почта</p>
-            <a class="linsk__link" href="@german_dlinikov"
-              >debilvvodil@ya.ru</a
-            >
-          </li>
-        </ul>
-      </section>
-      <section class="links">
-        <h2 class="links__header">Чем занимаюсь вечером</h2>
-        <ul class="links__container">
-          <li class="links__link">
-            <p class="links__title">Автор</p>
-            <a class="linsk__link" href="@german_dlinikov">qa.studio/</a>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Собеседую</p>
-            <a class="linsk__link" href="@german_dlinikov">на ютубе</a>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Главред</p>
-            <a class="linsk__link" href="@german_dlinikov">в тг канале</a>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Создаю карту</p>
-            <a class="linsk__link" href="@german_dlinikov">мест в Москве</a>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Пишу</p>
-            <a class="linsk__link" href="@german_dlinikov">про личный бюджет</a>
-          </li>
-        </ul>
-      </section>
-    </main>
-   <footer>
-      <button type = "button" class="button-link" href=""> В чем сила, брат?  </button>
-    </footer>
-    <script type="text/javascript" src="js.js"></script>
-  </body>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя Визитка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать!</h1>
+        <p>Меня зовут Виктор Меркулов, я веб-разработчик.</p>
+        <button id="play-button">Воспроизвести аудио</button>
+    </div>
+
+    <audio id="background-audio" src="audio/background.mp3" loop></audio>
+
+    <script>
+        const playButton = document.getElementById('play-button');
+        const audio = document.getElementById('background-audio');
+
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = 'Пауза';
+            } else {
+                audio.pause();
+                playButton.textContent = 'Воспроизвести аудио';
+            }
+        });
+    </script>
+</body>
 </html>
