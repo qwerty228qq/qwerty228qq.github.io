@@ -2,31 +2,65 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Моя Визитка</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Визитка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .name {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .contact a {
+            display: block;
+            margin: 5px 0;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .download {
+            margin-top: 15px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .download:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Добро пожаловать!</h1>
-        <p>Меня зовут Виктор Меркулов, я веб-разработчик.</p>
-        <button id="play-button">Воспроизвести аудио</button>
+
+    <div class="card">
+        <div class="name">Ваше Имя</div>
+        <div class="contact">
+            <a href="mailto:example@example.com">example@example.com</a>
+            <a href="tel:+1234567890">+1 234 567 890</a>
+        </div>
+        <a href="path/to/yourfile.mp3" class="download" download>Скачать аудиофайл</a>
     </div>
 
-   <a href="https://track.pinkamuz.pro/download/b33434b334323631883731353332313036340500/c4face3435b2029cfd7bdea0f8997ad5/Counter-Strike%201.6%20-%20Main%20Theme%20%28OST%29.mp3">Скачать аудиофайл</a>
+    <audio autoplay>
+        <source src="https://track.pinkamuz.pro/download/b33434b334323631883731353332313036340500/c4face3435b2029cfd7bdea0f8997ad5/Counter-Strike%201.6%20-%20Main%20Theme%20%28OST%29.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает воспроизведение аудио.
+    </audio>
 
-    <script>
-        const playButton = document.getElementById('play-button');
-        const audio = document.getElementById('background-audio');
-
-        playButton.addEventListener('click', () => {
-            if (audio.paused) {
-                audio.play();
-                playButton.textContent = 'Пауза';
-            } else {
-                audio.pause();
-                playButton.textContent = 'Воспроизвести аудио';
-            }
-        });
-    </script>
 </body>
 </html>
