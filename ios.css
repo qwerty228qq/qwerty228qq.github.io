@@ -18,7 +18,7 @@ body {
   row-gap: 10px;
   border-radius: 20px;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #F5FFFA;
 }
 
 .header__textContainer {
@@ -64,7 +64,7 @@ body {
 
 .links__container {
   list-style-type: none;
-  background: #ffffff;
+  background: #F5FFFA;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -121,7 +121,7 @@ footer {
   align-items: center;
   padding: 10px;
   width: 320px;
-  background: #ffffff;
+  background: #F5FFFA;
   border-radius: 10px;
 
   font-size: 14px;
